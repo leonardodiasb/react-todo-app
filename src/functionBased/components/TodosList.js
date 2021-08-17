@@ -1,22 +1,21 @@
-import React from "react"
-import TodoItem from "./TodoItem"
+import React from 'react';
 import PropTypes from 'prop-types';
+import TodoItem from './TodoItem';
 
-const TodosList = props => {
-  return (
-    <ul>
-      {props.todos.map(todo => (
-        <TodoItem
-          key={todo.id}
-          todo={todo}
-          handleChangeProps={props.handleChangeProps}
-          deleteTodoProps={props.deleteTodoProps}
-          setUpdate={props.setUpdate}
-        />
-      ))}
-    </ul>
-  )
-}
+const TodosList = (props) => (
+  <ul>
+    {/* eslint-disable-next-line */}
+    {props.todos.map((todo) => (
+      <TodoItem
+        key={todo.id}
+        todo={todo}
+        handleChangeProps={props.handleChangeProps}
+        deleteTodoProps={props.deleteTodoProps}
+        setUpdate={props.setUpdate}
+      />
+    ))}
+  </ul>
+);
 
 TodosList.propTypes = {
   todos: PropTypes.arrayOf.isRequired,
@@ -25,4 +24,4 @@ TodosList.propTypes = {
   setUpdate: PropTypes.func.isRequired,
 };
 
-export default TodosList
+export default TodosList;
