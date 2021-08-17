@@ -1,5 +1,6 @@
 import React from "react"
 import TodoItem from "./TodoItem"
+import PropTypes from 'prop-types';
 
 const TodosList = props => {
   return (
@@ -16,4 +17,12 @@ const TodosList = props => {
     </ul>
   )
 }
+
+TodosList.propTypes = {
+  todos: PropTypes.arrayOf.isRequired,
+  handleChangeProps: PropTypes.func.isRequired,
+  deleteTodoProps: PropTypes.func.isRequired,
+  setUpdate: PropTypes.func.isRequired,
+};
+
 export default TodosList

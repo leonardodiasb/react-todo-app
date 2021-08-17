@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import styles from "./TodoItem.module.css"
 import { FaTrash } from "react-icons/fa"
+import PropTypes from 'prop-types';
 
 const TodoItem = props => {
   const [editing, setEditing] = useState(false)
@@ -66,5 +67,12 @@ const TodoItem = props => {
     </li>
   )
 }
+
+TodoItem.propTypes = {
+  todo: PropTypes.element.isRequired,
+  handleChangeProps: PropTypes.func.isRequired,
+  deleteTodoProps: PropTypes.func.isRequired,
+  setUpdate: PropTypes.func.isRequired,
+};
 
 export default TodoItem
