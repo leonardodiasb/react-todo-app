@@ -11,14 +11,20 @@
 - React
 - NPM
 
-## Getting Started
-
 ### Install
 
 - `git clone https://github.com/leonardodiasb/react-todo-app.git`
 - `cd react-todo-app`
 - `npm install`
 - `npm start`
+
+## Getting Started
+
+- On the home page write the ToDo activities and press enter or click on the plus icon.
+- You can delete the activities by clicking on the trash can icon.
+- You can checkmark the activities that are done.
+- You can click on the menu button on the top left corner to navigate through the about and home pages.
+- The activities stay saved in the local storage.
 
 ## Author
 
